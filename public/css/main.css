@@ -21,7 +21,7 @@ text-align: center;
 
 }
 header{
-  background-image: url('image/book.jpg');
+  background-image: url('../image/book.jpg');
   background-size: cover;
   /*background-repeat: no-repeat;*/
   width: 100%;
