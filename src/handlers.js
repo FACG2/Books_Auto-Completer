@@ -5,7 +5,8 @@ var logic = require('./logic');
 var contentTypes = {
   css: 'text/css',
   js: 'application/javascript',
-  ico: 'image/x-icon'
+  ico: 'image/x-icon',
+  jpg: 'image/jpg'
 };
 
 
@@ -28,81 +29,13 @@ function handleSearch(req, res){
   res.end(JSON.stringify(result));
 }
 
-function handlePublic(req, res){
-  var url = req.url;
-  var parts = url.split('.');
-  var fileExtension = parts[parts.length - 1];
-  fs.readFile(__dirname + "/.." + url, function(err, data){
-    if(err){
-      res.writeHead(500, {'Content-Type': 'text/html'});
-      res.end('<h1>Internal Server Error</h1>');
-    }
-    else{
-      res.writeHead(200 , {'Content-Type': contentTypes[fileExtension]});
-      res.end(data);
-    }
-  });
-}
-
-
-function handleCss(req, res){
-  fs.readFile(__dirname + "/../public/css/main.css", function(err, data){
-    if(err){
-      res.writeHead(500 , {'Content-Type': 'text/html'});
-      res.end('<h1>Internal Server Error</h1>');
-    }
-    else{
-      res.writeHead(200 , {'Content-Type': 'text/css'});
-      res.end(data)
-    }
-  });
-}
-
-function handleJs(req, res){
-  fs.readFile(__dirname + "/../public/js/dom.js", function(err, data){
-    if(err){
-      res.writeHead(500 , {'Content-Type': 'text/html'});
-      res.end('<h1>Internal Server Error</h1>');
-    }
-    else{
-      res.writeHead(200 , {'Content-Type': 'application/javascript'});
-      res.end(data);
-    }
-  });
-}
-
-function handleImage(req, res){
-  fs.readFile(__dirname + "/../public/image/book.jpg" , function(err, data){
-    if(err){
-      res.writeHead(500 , {'Content-Type': 'text/html'});
-      res.end('<h1>Internal Server Error</h1>');
-    }
-    else{
-      res.end(data);
-    }
-  });
-}
-
-function handleFav(req, res){
-  fs.readFile(__dirname + "/.." + req.url, function(err, data){
-    if(err){
-      res.writeHead(500, {'Content-Type': 'text/html'});
-      res.end('<h1>Internal Server Error</h1>');
-    }
-    else{
-        res.writeHead(200 , {'Content-Type': 'image/x-icon'});
-        res.end(data);
-    }
-  });
-}
-
+// function to handle CSS JS and any other files
 function handleGeneric(req, res){
-  var url = req.url;
-  var parts = url.split('.');
+  var parts = req.url.split('.');
   var fileExtension = parts[parts.length - 1];
-  fs.readFile(__dirname + "/.." + url, function(err, data){
+  fs.readFile(__dirname + "/../public" + req.url , function(err, data){
     if(err){
-      res.writeHead(500, {'Content-Type': 'text/html'});
+      res.writeHead(500 , {'Content-Type': 'text/html'});
       res.end('<h1>Internal Server Error</h1>');
     }
     else{
@@ -115,10 +48,5 @@ function handleGeneric(req, res){
 module.exports = {
   handleHome: handleHome,
   handleSearch: handleSearch,
-  handlePublic: handlePublic,
-  handleCss: handleCss,
-  handleJs: handleJs,
-  handleImage: handleImage,
-  handleFav: handleFav,
   handleGeneric: handleGeneric
 }

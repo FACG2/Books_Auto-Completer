@@ -1,16 +1,6 @@
-// var click = document.querySelector('#clicking');
-// var opacity = document.querySelector('#opacity');
-// var out = document.querySelector('.out');
-// click.addEventListener('click',function(){
-
-// 	opacity.classList.add('any-name');
- 
-// });    
-
 
 var input = document.querySelector('input');
 var div = document.querySelector('.form');
-// var books = {};
 
 input.addEventListener('keyup', function(){
   makeRequest(this.value.toLowerCase());
@@ -21,7 +11,6 @@ function makeRequest(str){
   xhr.onreadystatechange = function(){
     if(xhr.readyState == 4 && xhr.status == 200){
       var data = JSON.parse(xhr.responseText);
-      // books = data;
       create(data);
     }
   }
@@ -41,5 +30,7 @@ function create(obj){
   });
   var oldDataList = document.querySelector("#books");
   div.replaceChild(dataList, oldDataList);
-  // console.log(dataList);
+  if(Object.keys(obj).length === 0){
+    alert('Book Not Found');
+  }
 }
