@@ -7,7 +7,7 @@ function router(req, res){
     handlers.handleHome(req, res);
   }
   // handle Search
-  else if(url === "/search"){
+  else if(url.startsWith("/search")){
     handlers.handleSearch(req, res);
   }
   // handle All Public Files
@@ -20,13 +20,6 @@ function router(req, res){
   else if(url === "/image/book.jpg"){
     handlers.handleImage(req, res);
   }
-  // else if(url === "/favicon.ico"){
-  //   handlers.handleFav(req, res);
-  // }
-  // else if(url.startsWith('/js')){
-  //   handlers.handleJs(req, res);
-  // }
-  // }
   else{
     handlers.handleGeneric(req, res);
   }

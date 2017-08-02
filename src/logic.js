@@ -1,14 +1,27 @@
 var books = require('./JSON/books.json');
-// var fs = require('fs');
-var str = "harry";
 
-var obj = JSON.parse(JSON.stringify(books));
-// console.log(obj);
-// console.log(typeof JSON.stringify(books));
-// console.log(Object.keys(JSON.parse(JSON.stringify(books))));
+function search(str){
+  var res = [];
+  // var res = {};
+  var arr = Object.keys(JSON.parse(JSON.stringify(books))).filter(function(val){
+    if(books[val].startsWith(str) && res.length < 15){
+      res.push(books[val]);
+      // res[val] = books[val];
+      return true;
+    }
+    return false;
+  });
+  var counter = 0;
+  var obj = {};
+  arr.map(function(element){
+    // console.log(element);
+    obj[element] = books[element];
+  });
+  // console.log(obj);
+  return obj;
+}
 
-var arr = Object.keys(JSON.parse(JSON.stringify(books))).filter(function(val){
-  if(books[val].startsWith(str)){
-    
-  }
-});
+// console.log(search('harry'));
+// search('harry');
+
+module.exports = search;
