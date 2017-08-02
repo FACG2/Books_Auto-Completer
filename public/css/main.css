@@ -1,6 +1,6 @@
 *{
   box-sizing: border-box;
-  
+
 }
 body{
   margin: 0 ;
@@ -39,8 +39,8 @@ header{
 }
 
 
-.any-name:after{
 
+.any-name:after{
   content: '';
   position: absolute;
   top: 0;
@@ -50,17 +50,17 @@ header{
   opacity: .7;
 
 
-
 }
+
 
 .form
 {
-  
+
   margin-top: 90px;
   /*z-index: 99999;*/
 
 
- 
+
 }
 
 .form form{
@@ -72,7 +72,7 @@ header{
 
 input::-webkit-calendar-picker-indicator {
   display: none;
- 
+
 }
 
 input{
@@ -87,7 +87,7 @@ input{
     font-size: 25px;
     margin-top: 90px;
     font-family: 'Julee', cursive;
-    
+
 }
 
 @media (max-width:600px){
