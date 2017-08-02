@@ -7,10 +7,13 @@ function router(req, res){
     handlers.handleHome(req, res);
   }
   // handle Find Words
-  else if(url === "/find-words"){
-    hanlers.handleWords(req, res);
+  else if(url === "/search"){
+    handlers.handleSearch(req, res);
   }
-  
+  else{
+    handlers.handleGeneric(req, res);
+  }
+
 }
 
 
