@@ -1,5 +1,6 @@
 var handlers = require('./handlers.js');
 
+
 function router(req, res){
   var url = req.url;
   // handle Home
@@ -10,7 +11,7 @@ function router(req, res){
   else if(url === "/find-words"){
     hanlers.handleWords(req, res);
   }
-  
+
 }
 
 
