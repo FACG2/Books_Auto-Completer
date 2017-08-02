@@ -6,7 +6,7 @@ function router(req, res){
   if(url === "/"){
     handlers.handleHome(req, res);
   }
-  // handle Find Words
+  // handle Search
   else if(url === "/search"){
     handlers.handleSearch(req, res);
   }
