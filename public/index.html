@@ -5,28 +5,44 @@
   <title>Books AutoCompleter</title>
   <link rel="stylesheet" href="css/main.css">
   <meta charset="UTF-8">
-
+  <link href="https://fonts.googleapis.com/css?family=Julee" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
 
 </head>
 
 <body>
-  <header>
+  <header id="opacity" class="any-name">
     <div class="container">
-      <!-- <h1>boods auto completer</h1> -->
+      
       <div class="form">
-            <input list="books" type="" name="" maxlength="50">
-           <datalist id="books" class="books">
-              <option value="A Game of Thrones"></option>
-              <option value="Harry Potter and the Sorcerer's Stone "></option>
-              <option value="The Diary of a Young Girl"></option>
-              <option value="Moath"></option>
-              <option value="Samer"></option>
-              <option value="Sohed"></option>
-              <option value="Ghadeer"></option>
-        </datalist>
+            <h1>book auto completer</h1>
+            
+            <form>
+              <input list="books" type="" name="" maxlength="50" placeholder="Search Book Name"  id="clicking">
+              <datalist id="books" class="books">
+                  <option value="A Game of Thrones"></option>
+                  <option value="Harry Potter and the Sorcerer's Stone "></option>
+                  <option value="The Diary of a Young Girl"></option>
+                  <option value="Moath"></option>
+                  <option value="Samer"></option>
+                  <option value="Sohed"></option>
+                  <option value="Ghadeer"></option>
+              </datalist>              
+            </form>
       </div>
     </div>
   </header>
+
+    <script type="text/javascript">
+      var click = document.querySelector('#clicking');
+      var opacity = document.querySelector('#opacity');
+      console.log(click , opacity);
+      click.addEventListener('click',function(){
+
+          // opacity.style.innerHTML = "header:after{content: '';position: absolute;top: 0;height: 100%;width: 100%; background-color: #000;opacity: .7;}";
+        opacity.classList.add('.any-name');
+      });
+  </script>
 </body>
 
 
