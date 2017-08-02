@@ -7,29 +7,29 @@ var logic = require('../logic.js');
 var tests = [
   {//7
     actual: logic('harry'),
-    expected: ["harry potter and the philosopher's stone", "harry potter and the chamber of secrets",
-               "harry potter and the half-blood prince","harry potter and the prisoner of azkaban",
-               "harry potter and the order of the phoenix","harry potter and the goblet of fire",
-               "harry potter and the deathly hallows","harry potter box set (books 1-7)"] ,
+    expected: {"0":"harry potter and the philosopher's stone","1":"harry potter and the chamber of secrets",
+               "2":"harry potter and the half-blood prince","3":"harry potter and the prisoner of azkaban",
+               "4":"harry potter and the order of the phoenix","5":"harry potter and the goblet of fire",
+               "6":"harry potter and the deathly hallows","559":"harry potter box set (books 1-7)"} ,
     description: "Harry Potter Series Books"
   },
 
   {//15
     actual: logic('the'),
-    expected: ["the hobbit", "the da vinci code", "the catcher in the rye","the great gatsby",
-                "the hunger games","the kite runner","the lord of the rings","the fellowship of the ring",
-                "the curious incident of the dog in the night-time",
-                "the odyssey","the time traveler's wife","the girl with the dragon tattoo",
-                "the two towers","the return of the king","the book thief"],
+    expected: {"937":"the hobbit", "10": "the da vinci code", "12": "the catcher in the rye","13": "the great gatsby",
+                "15":"the hunger games","16":"the kite runner","20":"the lord of the rings","23":"the fellowship of the ring",
+                "25":"the curious incident of the dog in the night-time",
+                "29":"the odyssey","31":"the time traveler's wife","34":"the girl with the dragon tattoo",
+                "35":"the two towers","37":"the return of the king","43":"the book thief"},
     description: "the hobbit book"
   },
 
 {//15
   actual: logic('a'),
-  expected: ["animal farm","angels & demons","a game of thrones","anna karenina",
-  "american gods","a wrinkle in time","a tale of two cities","a thousand splendid suns","atonement",
- "a clash of kings","a clockwork orange","anne frank: the diary of a young girl","angela's ashes",
-  "atlas shrugged","a short history of nearly everything"],
+  expected: {"": "animal farm","": "angels & demons","": "a game of thrones","": "anna karenina",
+  "": "american gods","": "a wrinkle in time","": "a tale of two cities","": "a thousand splendid suns","": "atonement",
+ "": "a clash of kings","": "a clockwork orange","": "anne frank: the diary of a young girl","": "angela's ashes",
+  "": "atlas shrugged","": "a short history of nearly everything"},
   description: "all books that starts at 'a'"
 
 },
