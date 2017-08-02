@@ -16,7 +16,7 @@ var tests = [
     expected: ["harry potter and the philosopher's stone", "harry potter and the chamber of secrets",
                "harry potter and the half-blood prince","harry potter and the prisoner of azkaban",
                "harry potter and the order of the phoenix","harry potter and the goblet of fire",
-               "harry potter and the deathly hallows",] ,
+               "harry potter and the deathly hallows","harry potter box set (books 1-7)"] ,
     description: "Harry Potter Series Books"
   },
 
@@ -69,9 +69,9 @@ var tests = [
   actual: logic('g'),
   expected: ["great expectations","good omens: the nice and accurate prophecies of agnes nutter, witch",
             "guns, germs, and steel: the fates of human societies","gone with the wind","gulliver's travels",
-          "girl with a pearl earring","gone girl","green eggs and ham","goodnight moon",
-        "gödel, escher, bach: an eternal golden braid","guards! guards!","going postal",
-      "getting things done: the art of stress-free productivity","gravity's rainbow","gilead"],
+            "girl with a pearl earring","gone girl","green eggs and ham","goodnight moon",
+            "gödel, escher, bach: an eternal golden braid","guards! guards!","going postal",
+            "getting things done: the art of stress-free productivity","gravity's rainbow","gilead"],
       description: "all books that starts at 'g'"
 },
 {//0
