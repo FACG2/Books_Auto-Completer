@@ -13,10 +13,13 @@ test.forEach(function(test){
 var tests = [
   {//7
     actual: logic('harry'),
-    expected: ["harry potter and the philosopher's stone", "harry potter and the chamber of secrets",
-               "harry potter and the half-blood prince","harry potter and the prisoner of azkaban",
-               "harry potter and the order of the phoenix","harry potter and the goblet of fire",
-               "harry potter and the deathly hallows","harry potter box set (books 1-7)"] ,
+    expected: [  "0": "harry potter and the philosopher's stone",
+                  "1": "harry potter and the chamber of secrets",
+                  "2": "harry potter and the half-blood prince",
+                  "3": "harry potter and the prisoner of azkaban",
+                  "4": "harry potter and the order of the phoenix",
+                  "5": "harry potter and the goblet of fire",
+                  "6": "harry potter and the deathly hallows","559": "harry potter box set (books 1-7)"] ,
     description: "Harry Potter Series Books"
   },
 

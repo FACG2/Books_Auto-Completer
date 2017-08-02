@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <header id="opacity" class="any-name">
+  <header id="opacity" class="out">
     <div class="container">
       
       <div class="form">
@@ -36,12 +36,18 @@
     <script type="text/javascript">
       var click = document.querySelector('#clicking');
       var opacity = document.querySelector('#opacity');
-      console.log(click , opacity);
+      var out = document.querySelector('.out');
       click.addEventListener('click',function(){
 
-          // opacity.style.innerHTML = "header:after{content: '';position: absolute;top: 0;height: 100%;width: 100%; background-color: #000;opacity: .7;}";
-        opacity.classList.add('.any-name');
-      });
+        opacity.classList.add('any-name');
+         
+      });    
+
+      //   window.addEventListener('click',function(){
+
+      //   opacity.classList.add('any-name');
+         
+      // });
   </script>
 </body>
 
