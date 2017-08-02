@@ -1,3 +1,13 @@
+// var click = document.querySelector('#clicking');
+// var opacity = document.querySelector('#opacity');
+// var out = document.querySelector('.out');
+// click.addEventListener('click',function(){
+
+// 	opacity.classList.add('any-name');
+ 
+// });    
+
+
 var input = document.querySelector('input');
 
 input.addEventListener('keyup', function(){
