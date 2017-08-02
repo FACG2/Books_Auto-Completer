@@ -2,12 +2,6 @@ var test = require('tape');
 var logic = require('../logic.js');
 
 
-test.forEach(function(test){
-  test('Example Test', function(t){
-    t.equals(test.actual , test.expected , test.description);
-    t.end();
-  });
-});
 
 
 var tests = [
@@ -27,11 +21,11 @@ var tests = [
                 "the curious incident of the dog in the night-time",
                 "the odyssey","the time traveler's wife","the girl with the dragon tattoo",
                 "the two towers","the return of the king","the book thief"],
-    description: "the hobbit book";
+    description: "the hobbit book"
   },
 
 {//15
-  actual: logic('a');
+  actual: logic('a'),
   expected: ["animal farm","angels & demons","a game of thrones","anna karenina",
   "american gods","a wrinkle in time","a tale of two cities","a thousand splendid suns","atonement",
  "a clash of kings","a clockwork orange","anne frank: the diary of a young girl","angela's ashes",
@@ -80,3 +74,12 @@ var tests = [
   description: "No book contain blue"
 }
 ];
+
+
+
+tests.forEach(function(element){
+  test('Example Test', function(t){
+    t.deepEqual(element.actual , element.expected , element.description);
+    t.end();
+  });
+});
