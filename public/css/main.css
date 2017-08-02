@@ -39,8 +39,8 @@ header{
 }
 
 
-/*header:after{
 
+.any-name:after{
   content: '';
   position: absolute;
   top: 0;
@@ -50,7 +50,8 @@ header{
   opacity: .7;
 
 
-}*/
+}
+
 
 .form
 {
