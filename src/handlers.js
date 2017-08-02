@@ -24,8 +24,7 @@ function handleHome(req, res){
 
 function handleSearch(req, res){
   var searchQuery=req.url.split('=')[1];
-  var result = logic(searchQuery);
-  // res.writeHead(302 , {'Location': '/'});
+  var result = logic(searchQuery.replace(/[+]/g," ").replace(/%20/g," "));
   res.end(JSON.stringify(result));
 }
 
