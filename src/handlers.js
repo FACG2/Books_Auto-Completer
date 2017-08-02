@@ -5,7 +5,7 @@ var logic = require('./logic');
 var contentTypes = {
   css: 'text/css',
   js: 'application/javascript',
-  ico: 'image/x-icon',
+  ico: 'image/x-icon'
 };
 
 
@@ -23,13 +23,9 @@ function handleHome(req, res){
 }
 
 function handleSearch(req, res){
-  // console.log("handle search is here!!");
   var searchQuery=req.url.split('=')[1];
-  var result = logic(searchQuery);
-  console.log(result);
-
-  res.writeHead(302 , {'Location': '/'});
-  res.end();
+  var result = logic(searchQuery.replace(/[+]/g," ").replace(/%20/g," "));
+  res.end(JSON.stringify(result));
 }
 
 function handlePublic(req, res){

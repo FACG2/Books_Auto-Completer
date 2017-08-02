@@ -20,7 +20,6 @@ text-align: center;
 .container h1{
 
 	text-transform: capitalize;
-	color: #FFF;
   font-size: 55px;
   position: relative;
   z-index: 8888;
