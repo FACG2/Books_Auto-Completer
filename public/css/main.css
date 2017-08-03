@@ -34,6 +34,7 @@ text-align: center;
   height: 675px;
   background-repeat: no-repeat;
   position: relative;
+  background-position: fixed;
 
 
 }
