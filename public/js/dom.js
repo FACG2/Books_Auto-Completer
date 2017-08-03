@@ -13,7 +13,7 @@ function makeRequest(str){
       create(data);
     }
   }
-  xhr.open('POST' , "/search?word="+str, true);
+  xhr.open('POST' , "/search?word="+encodeURIComponent(str), true);
   xhr.send();
 }
 

@@ -25,7 +25,7 @@ function handleHome(req, res){
 
 function handleSearch(req, res){
   var searchQuery=req.url.split('=')[1];
-  var result = logic(searchQuery.replace(/[+]/g," ").replace(/%20/g," "), books);
+  var result = logic(decodeURIComponent(searchQuery), books);
   res.end(JSON.stringify(result));
 }
 
