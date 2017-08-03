@@ -1,4 +1,3 @@
-
 var input = document.querySelector('input');
 var div = document.querySelector('.form');
 
@@ -29,7 +28,5 @@ function create(obj){
   });
   var oldDataList = document.querySelector("#books");
   div.replaceChild(dataList, oldDataList);
-  if(Object.keys(obj).length === 0){
-    alert('Book Not Found');
-  }
+
 }

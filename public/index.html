@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Books AutoCompleter</title>
     <link rel="stylesheet" href="css/main.css">
@@ -9,18 +8,23 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="icon" href="book.ico" />
   </head>
-
   <body>
-    <header id="opacity" class="out">
+    <header class="main">
       <div class="container">
         <div class="form">
-          <h1>books Auto-Completer</h1>
-          <input list="books" type="" name="" maxlength="50" placeholder="Search Book Name" id="clicking">
+          <h1 class="txt">book auto completer</h1>
+          <input class="fill-text" list="books" type="" name="" maxlength="50" placeholder="Search Book Name" id="clicking">
           <datalist id="books" class="books">
+                <option value="A Game of Thrones"></option>
+                <option value="Harry Potter and the Sorcerer's Stone "></option>
+                <option value="The Diary of a Young Girl"></option>
+                <option value="Moath"></option>
+                <option value="Samer"></option>
+                <option value="Sohed"></option>
+                <option value="Ghadeer"></option>
           </datalist>
         </div>
-      </div>
-    </header>
-    <script src="js/dom.js"></script>
+      </header>
+      <script src="js/dom.js"></script>
   </body>
 </html>
