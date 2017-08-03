@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "node src/test/test.js",
+    "server" : " nodemon src/server.js",
     "start": "node src/server.js"
   },
   "repository": {
