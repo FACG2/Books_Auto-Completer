@@ -1,6 +1,4 @@
-var books = require('./JSON/books.json');
-
-function search(str){
+function search(str, books){
   var obj = {}, counter = 0;
   Object.keys(JSON.parse(JSON.stringify(books))).filter((val) => {
     if(books[val].includes(str)) return true && counter++ < 15;

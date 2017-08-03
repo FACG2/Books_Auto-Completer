@@ -1,6 +1,7 @@
 var fs = require("fs");
 var queryString = require('querystring');
 var logic = require('./logic');
+var books = require('./JSON/books.json');
 
 var contentTypes = {
   css: 'text/css',
@@ -8,7 +9,6 @@ var contentTypes = {
   ico: 'image/x-icon',
   jpg: 'image/jpg'
 };
-
 
 function handleHome(req, res){
   fs.readFile(__dirname + "/../public/index.html", function(err, data){
@@ -25,7 +25,7 @@ function handleHome(req, res){
 
 function handleSearch(req, res){
   var searchQuery=req.url.split('=')[1];
-  var result = logic(searchQuery.replace(/[+]/g," ").replace(/%20/g," "));
+  var result = logic(searchQuery.replace(/[+]/g," ").replace(/%20/g," "), books);
   res.end(JSON.stringify(result));
 }
 

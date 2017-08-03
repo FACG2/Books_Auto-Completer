@@ -18,7 +18,6 @@ function makeRequest(str){
   xhr.send();
 }
 
-
 function create(obj){
   var dataList = document.createElement('datalist');
   dataList.id = "books";
