@@ -7,14 +7,11 @@ body{
   position: relative;
   font-family: 'Julee', cursive;
 }
-.container
-{
-max-width: 1000px;
-margin: auto;
-border: 1px solid transparent;
-text-align: center;
-/*margin-top: 150px;*/
-
+.container{
+  max-width: 1000px;
+  margin: auto;
+  border: 1px solid transparent;
+  text-align: center;
 }
 
 .container .txt{
@@ -23,8 +20,6 @@ text-align: center;
   font-size: 55px;
   position: relative;
   z-index: 8888;
-
-
 }
 
 .main{
@@ -34,11 +29,7 @@ text-align: center;
   height: 675px;
   background-repeat: no-repeat;
   position: relative;
-
-
 }
-
-
 
 .any-name:after{
   content: '';
@@ -48,31 +39,24 @@ text-align: center;
   width: 100%;
   background-color: #000;
   opacity: .7;
-
-
 }
-
 
 .form
 {
-
   margin-top: 90px;
-  /*z-index: 99999;*/
-
-
-
 }
 
 .form form{
   z-index: 9999;
   position: relative;
-
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> d097743f40eb35236f6df23256d9d806e6edb221
 .fill-text::-webkit-calendar-picker-indicator {
   display: none;
-
 }
 
 .fill-text{
@@ -87,14 +71,15 @@ text-align: center;
     font-size: 25px;
     margin-top: 90px;
     font-family: 'Julee', cursive;
-
 }
 
 @media (max-width:600px){
+<<<<<<< HEAD
+=======
 
+>>>>>>> d097743f40eb35236f6df23256d9d806e6edb221
 .fill-text{
     width: 98%;
 
-}
-
+  }
 }

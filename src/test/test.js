@@ -1,9 +1,6 @@
 var test = require('tape');
 var logic = require('../logic.js');
 
-
-
-
 var tests = [
   {//7
     actual: logic('harry'),
@@ -77,8 +74,6 @@ var tests = [
   description: "No book contain blue"
 }
 ];
-
-
 
 tests.forEach(function(element){
   test('Example Test', function(t){

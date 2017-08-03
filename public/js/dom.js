@@ -1,4 +1,3 @@
-
 var input = document.querySelector('input');
 var div = document.querySelector('.form');
 
@@ -14,10 +13,9 @@ function makeRequest(str){
       create(data);
     }
   }
-  xhr.open('POST' , "/search?word="+str, true);
+  xhr.open('POST' , "/search?word="+encodeURIComponent(str), true);
   xhr.send();
 }
-
 
 function create(obj){
   var dataList = document.createElement('datalist');
@@ -30,5 +28,5 @@ function create(obj){
   });
   var oldDataList = document.querySelector("#books");
   div.replaceChild(dataList, oldDataList);
-  
+
 }
