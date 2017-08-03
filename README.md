@@ -53,4 +53,4 @@ Search bar with drop-down list of 15 autocomplete words that can be tabbed and s
 
 - Run `npm run server` to start the server using nodemon (which will automatically restart Node when changes are detected in your files)
 
-Navigate to <a href="https://books-autocompleter1.herokuapp.com/">Page</a> in your browser
+Navigate to <a href="https://books-autocompleter.herokuapp.com/">Page</a> in your browser
